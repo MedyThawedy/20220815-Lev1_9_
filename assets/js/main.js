@@ -3,6 +3,7 @@ let words = ['hallo', 'Auto', 'Waschmaschine', 'Schrank', 'Katze', 'Beispiel', '
 let matches = [];
 
 let arrowFnGetValue = (nr) => {
+    document.getElementById('pOutput').innerHTML = '';
     let numberOfLetters = parseInt(nr);
     console.log('nr : ', numberOfLetters);
     for (let i = 0; i < words.length; i++) {
@@ -14,6 +15,7 @@ let arrowFnGetValue = (nr) => {
         }
     }
     arrowFnDisplayMatches();
+    matches = [];
 }
 
 console.log('----------------------------------------------------------------');
@@ -21,7 +23,7 @@ console.log('----------------------------------------------------------------');
 let arrowFnDisplayMatches = () => {
     for (let index = 0; index < matches.length; index++) {
         document.getElementById('pOutput').innerHTML = document.getElementById('pOutput').innerHTML + matches[index] + '</br>';
-        // matches.splice(index, 1);
+        console.log('Matches : ' + matches + 'index : ' + matches[index]);
     }
 }
 
